@@ -7,7 +7,7 @@ import {ROUTER_DIRECTIVES}      from 'angular2/router';
 import {RouteConfig}            from 'angular2/router';
 
 @Component({
-    selector: 'my-app',
+    selector:  'my-app',
     styleUrls: ['app/css/app.css'],
     template: `
         <div id="myApp">

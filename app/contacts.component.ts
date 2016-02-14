@@ -7,10 +7,10 @@ import {Contact}           from './Contact';
 import {ContactComponent}  from './contact.component';
 
 @Component({
-    selector: 'contacts',
-    styleUrls: ['app/css/contacts.css'],
+    selector:    'contacts',
+    styleUrls:   ['app/css/contacts.css'],
     templateUrl: 'app/views/contacts.html',
-    directives: [ContactComponent]
+    directives:  [ContactComponent]
 })
 export class Contacts implements OnInit { 
     

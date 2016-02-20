@@ -1,5 +1,5 @@
 export class Contact {
     
-    constructor(private lastname: string, private firstname: string, private age: number) {}
+    constructor(public lastname: string, public firstname: string, public age: number) {}
     
 }

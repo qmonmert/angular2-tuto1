@@ -4,11 +4,13 @@ import {Router}            from 'angular2/router';
 
 import {Contact}           from './contact';
 import {ContactComponent}  from './contact.component';
+import {ContactService}    from './contact.service';
 
 @Component({
     selector:    'contacts',
     styleUrls:   ['app/css/contacts.css'],
     templateUrl: 'app/views/contacts.html',
+    providers:   [ContactService],
     directives:  [ContactComponent]
 })
 export class Contacts implements OnInit { 
@@ -19,15 +21,22 @@ export class Contacts implements OnInit {
     
     isContactSelected: boolean;
     
-    constructor(private _router: Router) {}
+    constructor(private _contactService: ContactService, private _router: Router) {}
     
     ngOnInit() {
+        this.getContacts();
+        /*
         this.contacts = new Array();
         this.contacts.push(new Contact("Monmert", "Quentin", 27));
         this.contacts.push(new Contact("Monmert", "Thibaud", 23));
         this.contacts.push(new Contact("Monmert", "Gautier", 15));
-    
+        */
+        
         this.isContactSelected = false;
+    }
+    
+    getContacts() {
+        this._contactService.getContacts().then((contacts: Contact[]) => this.contacts = contacts);
     }
     
     seeDetail(contact) {

@@ -1,0 +1,28 @@
+h3 {
+    color: darkslateblue;
+}
+
+#newContact {
+    width: 80%;
+    margin: auto;
+    border: 2px solid darkslateblue;
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    font-size: 13px;
+    
+    background-color: white;
+}
+
+label {
+    width: 100px;
+}
+
+.ng-pristine {
+    border: 1px solid red;
+}
+
+.ng-valid {
+    border: 1px solid green;
+}

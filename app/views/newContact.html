@@ -1,0 +1,35 @@
+<div id="newContact">
+    
+    <h3>Component : new-detail</h3>
+
+    <form [ngFormModel]="myForm" (ngSubmit)=onSubmit(myForm.value)>
+        
+        <div class="form-group">
+            <label for="last-name">Lastname :</label>
+            <input type="text" id="last-name"
+                [ngFormControl]="myForm.controls['lastname']"
+                #lastname="ngForm">
+            <span *ngIf="!myForm.controls['lastname'].valid"></span>    
+        </div>
+        
+        <div class="form-group">
+            <label for="first-name">Firstname :</label>
+            <input type="text" id="first-name"
+                [ngFormControl]="myForm.controls['firstname']"
+                #firstname="ngForm">
+            <span *ngIf="!myForm.controls['firstname'].valid"></span>    
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age :</label>
+            <input type="text" id="age"
+                [ngFormControl]="myForm.controls['age']"
+                #age="ngForm">
+            <span *ngIf="!myForm.controls['age'].valid"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-default"
+            [disabled]="!myForm.valid">Create contact</button>
+    </form>
+
+</div>

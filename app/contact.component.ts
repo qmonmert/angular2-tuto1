@@ -17,7 +17,7 @@ export class ContactComponent {
     
     contactChanged = new EventEmitter<Contact>();
     
-    onChange(contactSelected: Contact) {
+    onSelectContact(contactSelected: Contact) {
         this.contactChanged.emit(contactSelected);
     }
     

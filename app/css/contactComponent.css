@@ -2,7 +2,7 @@ h3 {
     color: seagreen;
 }
 
-#contact {
+.contact {
     width: 80%;
     margin: auto;
     border: 2px solid seagreen;
@@ -11,14 +11,23 @@ h3 {
     padding-right: 5px;
     
     font-size: 13px;
+    
+    cursor: pointer;
+    
+    background: repeating-linear-gradient(135deg, 
+    #000, 
+    red 5%
+    ) !important;
+    color: white;
 }
 
 .contactSelected {
-    background: repeating-linear-gradient(
-        -55deg,
-        gray,
-        gray 5px,
-        lightgray 5px,
-        lightgray 10px
-    );
+    background: repeating-linear-gradient(135deg, 
+    #000, 
+    #0092b7 5%
+    ) !important;
+}
+	    
+.contactSelected, .contactSelected h3 {
+    color: white !important;   
 }

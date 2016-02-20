@@ -11,12 +11,12 @@
         </thead>
         <tbody>
             <tr *ngFor="#contact of contacts">
-                <td [ngSwitch]="isSelected && contactSelected.firstname === contact.firstname">
+                <td [ngSwitch]="isContactSelected && contactSelected.firstname === contact.firstname">
                     <contact-component *ngSwitchWhen="true" [contact]="contact" [isSelected]="true" (contactChanged)="onChange($event)"></contact-component>
                     <contact-component *ngSwitchDefault     [contact]="contact" [isSelected]="false" (contactChanged)="onChange($event)"></contact-component>
                 </td> 
-                <td>
-                    <a (click)="seeDetail(contact)">Detail</a>
+                <td class="td-center">
+                    <button type="button" class="btn btn-info" (click)="seeDetail(contact)">Detail</button>
                 </td>
             </tr>
         </tbody>

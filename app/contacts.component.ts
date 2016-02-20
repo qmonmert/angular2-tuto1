@@ -1,9 +1,8 @@
 import {Component, OnInit} from 'angular2/core';
 
 import {Router}            from 'angular2/router';
-import {ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {Contact}           from './Contact';
+import {Contact}           from './contact';
 import {ContactComponent}  from './contact.component';
 
 @Component({
@@ -18,7 +17,7 @@ export class Contacts implements OnInit {
     
     contactSelected: Contact;
     
-    isSelected: boolean;
+    isContactSelected: boolean;
     
     constructor(private _router: Router) {}
     
@@ -28,16 +27,20 @@ export class Contacts implements OnInit {
         this.contacts.push(new Contact("Monmert", "Thibaud", 23));
         this.contacts.push(new Contact("Monmert", "Gautier", 15));
     
-        this.isSelected = false;
+        this.isContactSelected = false;
     }
     
     seeDetail(contact) {
-        this._router.navigate(['ContactDetail', { lastname: contact.lastname, firstname: contact.firstname, age: contact.age }]);
+        this._router.navigate(
+            ['ContactDetail', { 
+                lastname: contact.lastname, 
+                firstname: contact.firstname, 
+                age: contact.age }]);
     }
     
     onChange(event) {
         this.contactSelected = event;
-        this.isSelected = true;
+        this.isContactSelected = true;
     }
     
 }

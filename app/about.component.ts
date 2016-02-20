@@ -1,6 +1,6 @@
 import {Component, OnInit} from 'angular2/core';
 
-import {Contact}           from './Contact';
+import {Contact}           from './contact';
 
 @Component({
     selector:    'about',
@@ -11,9 +11,7 @@ export class About implements OnInit {
     
     public content: string;
     
-    constructor() {
-        this.content = 'eeee';
-    }
+    constructor() {}
     
     ngOnInit() {
         this.content = "This is the about page";

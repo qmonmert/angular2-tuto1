@@ -1,8 +1,8 @@
-<div id="contact" [ngClass]="{contactSelected: isSelected}">
+<div class="contact" (click)="onSelectContact(contact)" [ngClass]="{contactSelected: isSelected}">
     
     <h3>Component : contact-component</h3>
 
-    <div (click)="onChange(contact)">
+    <div>
         {{ contact.firstname }} {{ contact.lastname }}
     </div>
     

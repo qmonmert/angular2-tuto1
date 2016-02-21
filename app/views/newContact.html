@@ -1,12 +1,12 @@
 <div id="newContact" class="style-sheet-class">
     
-    <h3>Component : new-detail</h3>
+    <h3>Component : new-contact</h3>
 
     <form [ngFormModel]="myForm" (ngSubmit)=onSubmit(myForm.value)>
         
         <div class="form-group">
             <label for="last-name">Lastname :</label>
-            <input type="text" id="last-name"
+            <input type="text" id="last-name" class="form-control"
                 [ngFormControl]="myForm.controls['lastname']"
                 #lastname="ngForm">
             <span *ngIf="!myForm.controls['lastname'].valid"></span>    
@@ -14,7 +14,7 @@
         
         <div class="form-group">
             <label for="first-name">Firstname :</label>
-            <input type="text" id="first-name"
+            <input type="text" id="first-name" class="form-control"
                 [ngFormControl]="myForm.controls['firstname']"
                 #firstname="ngForm">
             <span *ngIf="!myForm.controls['firstname'].valid"></span>    
@@ -22,7 +22,7 @@
         
         <div class="form-group">
             <label for="age">Age :</label>
-            <input type="text" id="age"
+            <input type="text" id="age" class="form-control"
                 [ngFormControl]="myForm.controls['age']"
                 #age="ngForm">
             <span *ngIf="!myForm.controls['age'].valid"></span>

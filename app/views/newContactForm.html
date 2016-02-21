@@ -1,0 +1,42 @@
+<div id="newContact" class="style-sheet-class">
+    
+    <h3>Component : new-contact-form</h3>
+
+    <form *ngIf="active" (ngSubmit)="onSubmit()" #myForm="ngForm">
+        
+        <div class="form-group">
+            <label for="last-name">Lastname :</label>
+            <input type="text" class="form-control" required
+                [(ngModel)]="model.lastname"
+                ngControl="lastname" #lastname="ngForm">
+            <div [hidden]="lastname.valid || lastname.pristine" class="alert alert-danger">
+                Lastname is required
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="first-name">Firstname :</label>
+            <input type="text" class="form-control" required
+                [(ngModel)]="model.firstname"
+                ngControl="firstname" #firstname="ngForm">
+            <div [hidden]="firstname.valid || firstname.pristine" class="alert alert-danger">
+                Firstname is required
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age :</label>
+            <input type="text" class="form-control" required
+                [(ngModel)]="model.age"
+                ngControl="age" #age="ngForm">
+            <div [hidden]="age.valid || age.pristine" class="alert alert-danger">
+                Age is required
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-default" [disabled]="!myForm.form.valid">Submit</button>
+        <button type="button" class="btn btn-default" (click)="newContact()">New Contact</button>
+
+    </form>
+
+</div>

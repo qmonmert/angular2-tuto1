@@ -25,6 +25,7 @@ export class NewContact implements OnInit {
     
     onSubmit(value) {
         // TODO: 
+        
     }
     
 }

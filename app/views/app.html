@@ -1,4 +1,4 @@
-<div id="myApp">
+<div id="myApp" class="style-sheet-class">
     <h3>Component : my-app</h3>
     <header>
         <nav>
@@ -7,7 +7,7 @@
             <a [routerLink]="['NewContact']">New Contact</a>
             -
             <a [routerLink]="['About']">About</a>
-            <span style="float:right;">{{ today | myDatePipe:'Nous sommes le : '}}</span>
+            <span>{{ today | myDatePipe:'Nous sommes le : '}}</span>
         </nav>
     </header>
     <div>

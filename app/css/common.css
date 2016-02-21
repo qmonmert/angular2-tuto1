@@ -1,0 +1,17 @@
+.style-sheet-class {
+    max-width: 80%;
+    margin: 0 auto 20px;
+    background-color: #F5F5F5;
+    margin-top: 10px;
+    -moz-box-shadow: #555555 4px 4px 15px;
+    -webkit-box-shadow: #555555 4px 4px 15px;
+    box-shadow: #555555 4px 4px 15px;
+    padding: 5px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+h3 {
+    color: dodgerblue;
+}

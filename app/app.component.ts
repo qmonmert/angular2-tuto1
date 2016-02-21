@@ -11,7 +11,7 @@ import {DatePipe}               from './date.pipe';
 
 @Component({
     selector:    'my-app',
-    styleUrls:   ['app/css/app.css'],
+    styleUrls:   ['app/css/app.css', 'app/css/common.css'],
     templateUrl: 'app/views/app.html',
     pipes:       [DatePipe],
     directives:  [ROUTER_DIRECTIVES]

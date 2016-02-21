@@ -8,7 +8,7 @@ import {ContactService}    from './contact.service';
 
 @Component({
     selector:    'contacts',
-    styleUrls:   ['app/css/contacts.css'],
+    styleUrls:   ['app/css/contacts.css', 'app/css/common.css'],
     templateUrl: 'app/views/contacts.html',
     providers:   [ContactService],
     directives:  [ContactComponent]
@@ -25,13 +25,6 @@ export class Contacts implements OnInit {
     
     ngOnInit() {
         this.getContacts();
-        /*
-        this.contacts = new Array();
-        this.contacts.push(new Contact("Monmert", "Quentin", 27));
-        this.contacts.push(new Contact("Monmert", "Thibaud", 23));
-        this.contacts.push(new Contact("Monmert", "Gautier", 15));
-        */
-        
         this.isContactSelected = false;
     }
     

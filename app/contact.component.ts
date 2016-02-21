@@ -4,7 +4,7 @@ import {Contact}                 from './Contact';
 
 @Component({
     selector:    'contact-component',
-    styleUrls:   ['app/css/contactComponent.css'],
+    styleUrls:   ['app/css/contactComponent.css', 'app/css/common.css'],
     templateUrl: 'app/views/contactComponent.html',
     inputs:      ['contact', 'isSelected'],
     outputs:     ['contactChanged']

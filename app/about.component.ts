@@ -4,7 +4,7 @@ import {Contact}           from './contact';
 
 @Component({
     selector:    'about',
-    styleUrls:   ['app/css/about.css'],
+    styleUrls:   ['app/css/about.css', 'app/css/common.css'],
     templateUrl: 'app/views/about.html' 
 })
 export class About implements OnInit { 

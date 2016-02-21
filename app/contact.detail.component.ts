@@ -6,7 +6,7 @@ import {Contact}           from './contact';
 
 @Component({
     selector:    'contact-detail-component',
-    styleUrls:   ['app/css/contactDetailComponent.css'],
+    styleUrls:   ['app/css/contactDetailComponent.css', 'app/css/common.css'],
     templateUrl: 'app/views/contactDetailComponent.html'
 })
 export class ContactDetailComponent implements OnInit { 

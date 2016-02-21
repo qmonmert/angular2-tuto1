@@ -1,14 +1,9 @@
-<div id="contacts">
+<div id="contacts" class="style-sheet-class">
     
     <h3>Component : contacts</h3>
 
-    <table id="tableContacts" class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Contacts</th>
-                <th>Details</th>
-            </tr>    
-        </thead>
+    <table id="tableContacts" class="table">
+        
         <tbody>
             <tr *ngFor="#contact of contacts">
                 <td [ngSwitch]="isContactSelected && contactSelected.firstname === contact.firstname">

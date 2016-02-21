@@ -1,24 +1,5 @@
-h3 {
-    color: seagreen;
-}
-
 .contact {
-    width: 80%;
-    margin: auto;
-    border: 2px solid seagreen;
-    border-radius: 10px 10px 10px 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    
-    font-size: 13px;
-    
     cursor: pointer;
-    
-    background: repeating-linear-gradient(135deg, 
-    #000, 
-    red 5%
-    ) !important;
-    color: white;
 }
 
 .contactSelected {

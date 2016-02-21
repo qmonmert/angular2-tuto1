@@ -6,7 +6,7 @@ import {Contact}                               from './contact';
 
 @Component({
     selector:    'new-contact',
-    styleUrls:   ['app/css/newContact.css'],
+    styleUrls:   ['app/css/newContact.css', 'app/css/common.css'],
     templateUrl: 'app/views/newContact.html'
 })
 export class NewContact implements OnInit { 

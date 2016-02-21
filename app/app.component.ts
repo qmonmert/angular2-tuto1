@@ -1,4 +1,4 @@
-import {Component}              from 'angular2/core';
+import {Component, OnInit}      from 'angular2/core';
 
 import {ROUTER_DIRECTIVES}      from 'angular2/router';
 import {RouteConfig}            from 'angular2/router';
@@ -7,11 +7,13 @@ import {Contacts}               from './contacts.component';
 import {NewContact}             from './new.contact';
 import {ContactDetailComponent} from './contact.detail.component';
 import {About}                  from './about.component';
+import {DatePipe}               from './date.pipe';
 
 @Component({
     selector:    'my-app',
     styleUrls:   ['app/css/app.css'],
     templateUrl: 'app/views/app.html',
+    pipes:       [DatePipe],
     directives:  [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
@@ -20,4 +22,12 @@ import {About}                  from './about.component';
     {path:'/contactDetail',                     name: 'ContactDetail', component: ContactDetailComponent               },
     {path:'/about',                             name: 'About',         component: About                                }
 ])
-export class AppComponent { }
+export class AppComponent implements OnInit { 
+    
+    today: Date;
+    
+    ngOnInit() {
+        this.today = new Date();    
+    }
+    
+}

@@ -31,3 +31,7 @@ h3 {
 .contactSelected, .contactSelected h3 {
     color: white !important;   
 }
+
+.clicked-name {
+    font-style: italic;
+}

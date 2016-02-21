@@ -3,8 +3,11 @@
     <header>
         <nav>
             <a [routerLink]="['Contacts']">Contacts</a>
+            -
             <a [routerLink]="['NewContact']">New Contact</a>
+            -
             <a [routerLink]="['About']">About</a>
+            <span style="float:right;">{{ today | myDatePipe:'Nous sommes le : '}}</span>
         </nav>
     </header>
     <div>
